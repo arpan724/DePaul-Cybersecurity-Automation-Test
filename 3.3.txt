@@ -1,0 +1,63 @@
+Started by user Arpan Panchal
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/GitExample
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/arpan724/DePaul-Cybersecurity-Automation-Test.git
+ > git init /var/jenkins_home/workspace/GitExample # timeout=10
+Fetching upstream changes from https://github.com/arpan724/DePaul-Cybersecurity-Automation-Test.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/arpan724/DePaul-Cybersecurity-Automation-Test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/arpan724/DePaul-Cybersecurity-Automation-Test.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision afcead3f1ea4b8efffcc8ed3f23262c939823688 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f afcead3f1ea4b8efffcc8ed3f23262c939823688 # timeout=10
+Commit message: "Merge pull request #1 from arpan724/Step-B"
+First time build. Skipping changelog.
+[GitExample] $ /bin/sh -xe /tmp/jenkins4055369725469061053.sh
++ echo Listing files in the repository:
+Listing files in the repository:
++ ls -la
+total 8
+drwxr-xr-x 3 jenkins jenkins  59 Oct 17 06:29 .
+drwxr-xr-x 3 jenkins jenkins  24 Oct 17 06:29 ..
+drwxr-xr-x 8 jenkins jenkins 162 Oct 17 06:29 .git
+-rw-r--r-- 1 jenkins jenkins  24 Oct 17 06:29 README.md
+-rw-r--r-- 1 jenkins jenkins 563 Oct 17 06:29 sample_script.py
++ echo Displaying content of sample_script.py
+Displaying content of sample_script.py
++ cat sample_script.py
+# Sample script
+
+def calculate_sum(a, b):
+    """
+    A simple function to calculate the sum of two numbers.
+    """
+    return a + b
+
+def display_sum(a, b):
+    """
+    Display the sum of two numbers.
+    """
+    sum_result = calculate_sum(a, b)
+    print(f"The sum of {a} and {b} is {sum_result}.")
+
+def main():
+    """
+    The main function that runs when the script is executed.
+    """
+    num1 = 5
+    num2 = 7
+
+    print("Starting the placeholder script...")
+    display_sum(num1, num2)
+    print("Script finished.")
+
+if __name__ == "__main__":
+    main()
+Finished: SUCCESS
